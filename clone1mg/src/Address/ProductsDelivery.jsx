@@ -9,7 +9,7 @@ const ProductsDelivery = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const getData = async () => {
-    let res = await fetch(`http://localhost:8080/Cart`);
+    let res = await fetch(`https://json-server-tata1mg.cyclic.app/Cart`);
     let data1 = await res.json();
     //  console.log(data1)
     setData(...data, data1);
@@ -17,10 +17,12 @@ const ProductsDelivery = () => {
   const [address, setAddress] = useState([]);
   const { id } = useContext(AddressContext);
   const getAddress = async () => {
-    axios.get(`http://localhost:8080/address/${id}`).then((res) => {
-      console.log(res.data);
-      setAddress(res.data);
-    });
+    axios
+      .get(`https://json-server-tata1mg.cyclic.app/address/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        setAddress(res.data);
+      });
   };
   const [Mtotal, setMtotal] = React.useState(0);
   const [Dtotal, setDtotal] = React.useState(0);

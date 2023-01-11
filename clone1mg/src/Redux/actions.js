@@ -17,7 +17,7 @@ import axios from "axios";
 export const get_data = (dispatch) => {
   dispatch({ type: LOADING });
   axios
-    .get("http://localhost:8080/Cart")
+    .get("https://json-server-tata1mg.cyclic.app/Cart")
     .then((payload) => {
       dispatch({ type: ADD_TO_CART, payload: payload.data });
     })
@@ -29,7 +29,7 @@ export const get_data = (dispatch) => {
 export const Products_data_func = (dispatch) => {
   dispatch({ type: LOADING });
   axios
-    .get(`http://localhost:8080/Featured`)
+    .get(`https://json-server-tata1mg.cyclic.app/Featured`)
     .then((response) => {
       dispatch({ type: GET_PRODUCTS, payload: response.data });
     })

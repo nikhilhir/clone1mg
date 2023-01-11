@@ -14,7 +14,7 @@ export const Individual_Product_Page = () => {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:8080/${type}/${id}`)
+      .get(`https://json-server-tata1mg.cyclic.app/${type}/${id}`)
       .then((response) => {
         setProduct(response.data);
       })

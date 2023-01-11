@@ -29,3 +29,6 @@ const Ayurved = () => {
 };
 
 export default Ayurved;
+
+
+

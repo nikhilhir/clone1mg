@@ -10,7 +10,7 @@ const AddAddress = () => {
   let navigate = useNavigate();
 
   const getAddress = async () => {
-    let res = await fetch(`http://localhost:8080/address`);
+    let res = await fetch(`https://json-server-tata1mg.cyclic.app/address`);
     let data1 = await res.json();
     console.log(data1);
     setAddress(data1);

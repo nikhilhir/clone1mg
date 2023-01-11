@@ -29,7 +29,7 @@ export const Single_slider_product = ({
     }
 
     axios
-      .post(`http://localhost:8080/Cart`, {
+      .post(`https://json-server-tata1mg.cyclic.app/Cart`, {
         qty: 1,
         image_url,
         name,

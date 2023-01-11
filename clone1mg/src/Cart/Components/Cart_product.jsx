@@ -26,7 +26,7 @@ const Cart_product = ({
 
   const handleDelete = () => {
     axios
-      .delete(`http://localhost:8080/Cart/${id}`, {
+      .delete(`https://json-server-tata1mg.cyclic.app/Cart/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -54,7 +54,7 @@ const Cart_product = ({
       };
     }
     axios
-      .patch(`http://localhost:8080/Cart/${id}`, payload, {
+      .patch(`https://json-server-tata1mg.cyclic.app/${id}`, payload, {
         headers: {
           "Content-Type": "application/json",
         },

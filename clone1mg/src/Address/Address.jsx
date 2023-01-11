@@ -14,11 +14,14 @@ const Address = () => {
   };
 
   const add = async (data) => {
-    let response = await fetch(`http://localhost:8080/address`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    let response = await fetch(
+      `https://json-server-tata1mg.cyclic.app/address`,
+      {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
     let data1 = await response.json();
     setData(data1);
   };
